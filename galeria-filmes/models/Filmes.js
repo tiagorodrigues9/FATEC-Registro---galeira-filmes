@@ -29,7 +29,7 @@ const Filmes = connection.define("filmes", {
     allowNull: false,
   },
   nota: {
-    type: Sequelize.FLOAT, // Alterado para FLOAT para permitir decimais
+    type: Sequelize.FLOAT,
     allowNull: false,
   },
   sinopse: {
@@ -38,7 +38,5 @@ const Filmes = connection.define("filmes", {
   },
 });
 
-// Sincronização com o banco de dados (altere para evitar perda de dados)
-Filmes.sync({ alter: true }); // Usa "alter" para ajustar a tabela sem apagar dados existentes
-
+Filmes.sync({ alter: true });
 export default Filmes;
