@@ -45,7 +45,6 @@ app.post("/upload", upload.single("file"), (req, res) => {
   const nota = req.body.nota;
   const sinopse = req.body.sinopse;
 
-  // Criar o filme no banco de dados
   Filmes.create({
     file: file,
     titulo: titulo,
